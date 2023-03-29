@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const lista = [3, -2, 3, 10, 12, -14, -8];
+        const resultados = [0,0,0,0,0];
+        for (let i = 0; i < lista.length; i++) {
+            if (lista[i] > 0) {
+                resultados[0]++;
+                resultados[1] += lista[i];
+                if (lista[i] > 3) {
+                    resultados[4]++;
+                }
+            } else if (lista[i] < 0) {
+                resultados[2]++;
+                resultados[3] += lista[i];
+            }
+        }
+
+        console.log("Positivos: " + resultados[0]);
+        console.log(`Negativos: ${resultados[1]}`);
+        console.log(`Suma positivos: ${resultados[2]}`);
+        console.log(`Suma negativos: ${resultados[3]}`);
+        console.log(`Mayores que 3: ${resultados[4]}`);
+
+    </script>
+</body>
+
+</html>

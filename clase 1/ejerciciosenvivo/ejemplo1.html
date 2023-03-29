@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log("Hola mundo");
+        var j = 10;
+        var j = "un cambio";
+        console.log(j);
+        // se recomienda usar let
+        let miVar = 100;
+        // let miVar = "algo";
+        console.log(miVar);
+        const palabra = "Carlos";
+        // esto no funciona porque es inmutable
+        palabra[0] = "c";
+        console.log(palabra);
+        // palabra = 100;
+        const miLista = [3, 4, 2, -1, -10];
+        // esto da error de tipo de dato
+        // miLista = "algo";
+        miLista[0] = 1000;
+        console.log(miLista);
+        // da un undefined
+        console.log(miLista[6]);
+        for (let i = 0; i < miLista.length; i++) {
+            if (miLista[i] > 2) {
+                console.log(miLista[i]);
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

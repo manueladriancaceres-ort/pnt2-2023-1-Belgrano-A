@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const recibo = {
+            numero : 10000122,
+            descripcion: 'Recibí de ... el importe de ...',
+            importe: 12350
+        }
+        console.log(recibo);
+        console.log(recibo.importe);
+        const miVariable = 'numero';
+        console.log(recibo[miVariable]);
+        recibo.fecha = '20230328';
+        console.log(recibo);
+        delete recibo.numero;
+        console.log(recibo);
+    </script>
+</body>
+</html>

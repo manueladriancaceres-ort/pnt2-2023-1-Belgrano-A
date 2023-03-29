@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const lista = [4,-3,34,20];
+        console.log(lista);
+        lista.push(600);
+        console.log(lista);
+        lista.push(900);
+        lista.pop();
+        console.log(lista);
+        console.log(cantidadElementos(lista));
+        console.log(calcular());
+        let j = 1500;
+        console.log("Fuera de la funcion calcular " + j);
+
+        // esta da verdadero
+        console.log(30 == "30");    
+        // esto da falso
+        console.log(30 === "30");
+
+        function cantidadElementos(listaLocal) {
+            return listaLocal.length;
+        }
+
+        function calcular() {
+            let j = 10;
+            console.log("En la funcion calcular " + j);
+            // return j;
+        }
+
+    </script>
+</body>
+</html>
