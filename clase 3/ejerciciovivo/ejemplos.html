@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numeros = [3,4,2,10,56,20,30,3];
+        numeros.forEach(numero => console.log(numero));
+
+        console.log('Sumo 3 a cada elemento usando map');
+        numerosSumadoTres = numeros.map(numero => numero + 3);
+        console.log(numerosSumadoTres);
+
+        console.log('Filtro numeros mayores a 10');
+        console.log(numeros.filter(n=>n>10));
+
+        console.log('Suma de todos los numeros');
+        console.log(numeros.reduce((a,n) => a+n,0));
+
+        console.log('Lista ordenada sin parametros');
+        console.log([...numeros].sort());
+        console.log('Lista ordenada por numero ascendente');
+        console.log([...numeros].sort((a,b)=>a-b));
+
+        const personas= [{id:100,nombre:"Juan",edad:34},{id:101,nombre:"Raul",edad:25}];
+        personas.forEach(persona => console.log(persona));
+        personasNombreMayuscula =
+            personas.map(p => { return { id:p.id, nombre: p.nombre.toUpperCase()} })
+        console.log(personasNombreMayuscula);
+        console.log('Personas con id menor a 101');
+        console.log(personas.filter(p => p.id < 101));
+
+        console.log('Suma de edades ' +  personas.reduce((a,p) => a+p.edad, 0 ) );    
+
+        console.log('Orden de personas por edad ascendente');
+        console.log([...personas].sort((a,b)=>a.edad-b.edad));
+        console.log('Orden de personas por edad descendente');
+        console.log([...personas].sort((a,b)=>b.edad-a.edad));
+
+    </script>
+</body>
+</html>

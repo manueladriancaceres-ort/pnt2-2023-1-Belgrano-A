@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ejercicio 1 filter
+        const numeros = [8, 11, 20, 21, 234, 2345]
+        /*
+        function filtroNumeros(lista, numero) {
+            return lista.filter(n => n < numero)
+        }
+        */
+        const fFiltroNumeros = (lista, numero) => lista.filter(n => n < numero)
+        console.log("Con funcion")
+        console.log(fFiltroNumeros(numeros, 34))
+        // ejercicio 2 filter
+        const ncs = [{ id: 100, descripcion: "prov1", precio: 1000 },
+        { id: 102, descripcion: "prov2", precio: 1300 },
+        { id: 103, descripcion: "prov3", precio: 600 }];
+        function retorneLista(array, num) {
+            const arrayFiltrado = array.filter(e => e.precio < num)
+            return arrayFiltrado;
+        }
+        console.log(retorneLista(ncs, 700))
+
+
+    </script>
+</body>
+
+</html>

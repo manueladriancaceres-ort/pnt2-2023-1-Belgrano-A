@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <div id="app">
+        <p v-if="verParrafo" :style="{ color: color, fontSize: fontSize + 'px' }" >{{ mensaje }}</p>
+        <p v-show="verParrafo">Ejemplo</p>
+        <li v-for="cliente in clientes">
+            id {{cliente.id}} nombre {{cliente.nombre}} edad {{cliente.edad}}
+        </li>
+        <input v-model="saludo">
+        <button v-on:click="saludar">Saludar</button>
+    </div>
+    <script>
+        const { createApp } = Vue      
+        const obj = createApp({
+          data() {
+            return {
+              mensaje: 'Clientes', color: 'red', fontSize: 30, verParrafo: true,
+              clientes: [{id:100,nombre:'Juana',edad:30},{id:101,nombre:'Raul',edad:25},{id:102,nombre:'Carlos',edad:38}],
+              saludo: ''  
+            }
+          },
+          methods: {
+            saludar() { console.log(this.saludo); this.mensaje = "Lista de clientes"; this.color='green' }
+          }
+        }).mount('#app')
+    </script>
+</body>
+</html>

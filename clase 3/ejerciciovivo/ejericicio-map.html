@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ejercicio 1
+        const numeros = [1, 2, 3, 4, 5]
+        console.log(numeros)
+        numerosPorCinco = numeros.map(numero => numero * 5)
+        console.log(numerosPorCinco)
+        // ejercicio 2
+        const precios = [100, 120, 300, 230, 320]
+        const preciosIVA = precios.map(precio => precio + (precio * 0.21))
+        console.log(precios)
+        console.log(preciosIVA)
+        // ejercicio 3
+        const comprobantesNotasCred = [{id:100,descripcion:"prov1",precio:1000},{id:102,descripcion:"prov2",precio:1300}]
+        const comprobantesConIva = comprobantesNotasCred.map(cte => {return {id:cte.id, descripcion:cte.descripcion, precio: cte.precio * 1.21}})
+        console.log(comprobantesConIva)
+
+    </script>
+</body>
+
+</html>
